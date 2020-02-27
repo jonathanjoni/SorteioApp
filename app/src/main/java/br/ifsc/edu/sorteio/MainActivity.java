@@ -7,25 +7,28 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
-    EditText NumInicialC, NumFinalC;
-    TextView ResultadoC;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        NumInicialC = findViewById(R.id.NumInicial);
-        NumFinalC   = findViewById(R.id.NumFinal);
-        ResultadoC  = findViewById(R.id.Resultado);
+
     }
 
     public void Sortear(View view) {
 
-        int inicial = Integer.parseInt(NumInicialC.getText().toString());
+        TextView textView = findViewById(R.id.texView);
+        EditiText editiTextInicial = findViewById(R.id.editTextInicial);
+        EditiText editiInicial = findViewById(R.id.editTextInicial);
 
-        ResultadoC.setText(Integer.toString(inicial));
+        int valorInicial = Integer.parseInt(editTextInicial.getText().toString());
+        int valorFinal = Integer.parseInt(editiTextInicial.getText().toString());
+        int numeroSorteado = new Random().nextInt(boud:valorFinal-valorInicial)+valorFinal);
     }
 }
